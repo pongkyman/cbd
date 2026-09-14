@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#29261f" />
+    <meta
+      name="description"
+      content="A little birthday book about someone extraordinary."
+    />
+    <title>A Little Book About You</title>
+    <link
+      rel="preload"
+      href="images/archive-portrait.jpg"
+      as="image"
+      fetchpriority="high"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#opening-letter">Skip to the book</a>
+
+    <header class="cover" id="top">
+      <div class="cover__mark" aria-hidden="true">I</div>
+      <p class="eyebrow">Private collection · First edition</p>
+      <div class="cover__title-wrap">
+        <h1>A little book<br />about <em>You</em></h1>
+        <p class="cover__dek">
+          An archive of the little things<br />that make you, you.
+        </p>
+      </div>
+      <div class="cover__footer">
+        <p><span class="editable">18 September 2026</span></p>
+        <a class="open-book" href="#opening-letter"
+          >Open the book <span aria-hidden="true">↓</span></a
+        >
+      </div>
+    </header>
+
+    <main>
+      <section
+        class="letter page"
+        id="opening-letter"
+        aria-labelledby="letter-title"
+      >
+        <div class="page-label reveal">
+          <span>Foreword</span><span>Page 01</span>
+        </div>
+        <div class="letter__body reveal">
+          <p class="salutation">Dear <span class="editable">[Name]</span>,</p>
+          <h2 id="letter-title">Today is your day.</h2>
+          <div class="letter__copy">
+            <p>
+              So i wanted to make different, a book. Not just a book, but
+              something to remind you of how much you are loved, and how much
+              you mean to the people around you.
+            </p>
+            <p>
+              Contains a collection of small things i noticed about you, and a
+              few words from the people who love you.
+            </p>
+            <p>
+              This book is only a beginning. There will always be more to
+              notice, more to remember, and more reasons to celebrate you.
+            </p>
+          </div>
+          <p class="signature">
+            For you, always<br /><span class="editable">Necoles</span>
+          </p>
+        </div>
+      </section>
+
+      <section
+        class="person page page--ink"
+        id="person"
+        aria-labelledby="person-title"
+      >
+        <div class="page-label reveal">
+          <span>Chapter one</span><span>Page 02</span>
+        </div>
+        <div class="chapter-heading reveal">
+          <p class="chapter-number">01</p>
+          <h2 id="person-title">The Person</h2>
+          <p class="chapter-note">Notes on a singular human being.</p>
+        </div>
+        <div class="person__portrait reveal">
+          <figure>
+            <img
+              src="images/dr clara.jpg"
+              width="1122"
+              height="1402"
+              alt="dr. Marisca Clarissa Virgie"
+            />
+            <figcaption>
+              <span>dr. Marisca Clarissa Virgie</span><span>Portrait 001</span>
+            </figcaption>
+          </figure>
+          <blockquote>
+            <p>
+              She is kind.<br />She is beautiful.<br />She cries easily over
+              small emotional things.<br />She sleeps (like a lot).<br />She
+              farts (like a lot).
+            </p>
+          </blockquote>
+        </div>
+        <div
+          class="fact-index reveal"
+          id="fact-index"
+          aria-label="A catalogue of small facts"
+        ></div>
+      </section>
+
+      <section
+        class="little-things page"
+        id="little-things"
+        aria-labelledby="things-title"
+      >
+        <div class="page-label reveal">
+          <span>Chapter two</span><span>Page 04</span>
+        </div>
+        <div class="chapter-heading reveal">
+          <p class="chapter-number">02</p>
+          <h2 id="things-title">The Little Things</h2>
+          <p class="chapter-note">Field notes, gathered with affection.</p>
+        </div>
+        <div class="observations" id="observations"></div>
+      </section>
+
+      <section
+        class="archive page"
+        id="archive"
+        aria-labelledby="archive-title"
+      >
+        <div class="page-label reveal">
+          <span>Chapter three</span><span>Page 06</span>
+        </div>
+        <div class="archive__intro reveal">
+          <div class="chapter-heading">
+            <p class="chapter-number">03</p>
+            <h2 id="archive-title">The Archive</h2>
+          </div>
+          <p>
+            Proof that a life is made not only of milestones, but of light,
+            places, expressions, and Tuesday afternoons.
+          </p>
+        </div>
+        <div class="gallery" id="gallery"></div>
+      </section>
+
+      <section
+        class="voices page page--clay"
+        id="voices"
+        aria-labelledby="voices-title"
+      >
+        <div class="page-label reveal">
+          <span>Chapter four</span><span>Page 10</span>
+        </div>
+        <div class="voices__intro reveal">
+          <div class="chapter-heading">
+            <p class="chapter-number">04</p>
+            <h2 id="voices-title">In Other People’s Words</h2>
+          </div>
+          <p class="display-copy">
+            A person is never just who they think they are.
+          </p>
+          <p>
+            Sometimes, the best way to see yourself is through the people who
+            know you.
+          </p>
+        </div>
+        <div class="voice-list" id="voice-list"></div>
+      </section>
+
+      <section
+        class="year-ahead page"
+        id="year-ahead"
+        aria-labelledby="year-title"
+      >
+        <div class="page-label reveal">
+          <span>Chapter five</span><span>Page 12</span>
+        </div>
+        <div class="year-ahead__content reveal">
+          <div class="chapter-heading">
+            <p class="chapter-number">05</p>
+            <h2 id="year-title">For the Year Ahead</h2>
+          </div>
+          <div class="wishes">
+            <p>
+              I hope this year brings you things you’ve been quietly waiting
+              for.
+            </p>
+            <p>
+              I hope you become more confident in the person you’re becoming.
+            </p>
+            <p>I hope you find new things to love.</p>
+            <p>I hope you laugh a lot.</p>
+            <p>I hope you’re proud of yourself.</p>
+            <p>
+              And every once in a while, I hope you stop and realize just how
+              loved you are.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="from-me page page--ink"
+        id="from-me"
+        aria-labelledby="from-me-title"
+      >
+        <div class="page-label reveal">
+          <span>Final page</span><span>Page 14</span>
+        </div>
+        <div class="from-me__content reveal">
+          <p class="chapter-number">06</p>
+          <h2 id="from-me-title">From Me</h2>
+          <p class="display-copy">
+            Everyone has left their little piece of this book.<br />I saved mine
+            for the last page.
+          </p>
+          <div id="final-voice"></div>
+          <div class="final-note">
+            <p>Happy birthday, my love.</p>
+            <p>
+              I hope this little book reminds you of what the people around you
+              already know: the world is warmer, funnier, and much more
+              interesting with you in it.
+            </p>
+            <p class="signature"><span class="editable">[Your name]</span></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="back-cover">
+      <div class="back-cover__mark" aria-hidden="true">✦</div>
+      <div>
+        <p class="eyebrow">
+          A little book about <span class="editable">[Name]</span>
+        </p>
+        <h2>Made especially<br />for you.</h2>
+      </div>
+      <div class="back-cover__footer">
+        <p>
+          First edition<br /><span class="editable">18 September 2026</span>
+        </p>
+        <a href="#top">Read again <span aria-hidden="true">↑</span></a>
+        <p>The end</p>
+      </div>
+    </footer>
+  </body>
+</html>
