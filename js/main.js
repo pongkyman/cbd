@@ -443,3 +443,113 @@ if (reducedMotion || !("IntersectionObserver" in window)) {
     .querySelectorAll(".reveal")
     .forEach((element) => observer.observe(element));
 }
+
+const collageIntro = document.querySelector("#collage-intro");
+const collage = document.querySelector("#collage");
+const collageCloseControls = collageIntro?.querySelectorAll(
+  "[data-collage-close]",
+);
+const collageImages = [
+  ...galleryItems,
+  {
+    src: "images/dr clara.webp",
+    alt: "A portrait of Clara",
+  },
+  {
+    src: "images/dogg.webp",
+    alt: "A dog from the archive",
+  },
+];
+
+if (collageIntro && collage && collageCloseControls) {
+  collage.innerHTML = collageImages
+    .map(
+      (image, index) => `
+        <div class="collage__item" style="--collage-index: ${index}; --collage-rotation: ${index % 2 ? "1.5deg" : "-1.5deg"};">
+          <img src="${image.src}" alt="${image.alt}" loading="eager" decoding="async" />
+        </div>`,
+    )
+    .join("");
+
+  const coverAction = document.querySelector(".open-book");
+
+  const closeCollage = () => {
+    collageIntro.classList.remove("is-open");
+    document.body.classList.remove("is-collage-open");
+    coverAction?.focus();
+  };
+
+  collageIntro.classList.add("is-open");
+  document.body.classList.add("is-collage-open");
+  collageCloseControls[collageCloseControls.length - 1].focus();
+
+  collageCloseControls.forEach((control) => {
+    control.addEventListener("click", closeCollage);
+  });
+  collageIntro.addEventListener("click", (event) => {
+    if (event.target === collageIntro) closeCollage();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && collageIntro.classList.contains("is-open")) {
+      closeCollage();
+    }
+  });
+}
+
+const cover = document.querySelector("[data-interactive-cover]");
+const openBook = cover?.querySelector(".open-book");
+const openingLetter = document.querySelector("#opening-letter");
+
+if (cover && openBook && openingLetter) {
+  const setCoverPosition = (clientX, clientY) => {
+    const bounds = cover.getBoundingClientRect();
+    const x = Math.max(
+      -1,
+      Math.min(1, ((clientX - bounds.left) / bounds.width) * 2 - 1),
+    );
+    const y = Math.max(
+      -1,
+      Math.min(1, ((clientY - bounds.top) / bounds.height) * 2 - 1),
+    );
+    cover.style.setProperty("--cover-x", Math.round(x * 14));
+    cover.style.setProperty("--cover-y", Math.round(y * 14));
+  };
+
+  const resetCoverPosition = () => {
+    cover.style.setProperty("--cover-x", "0");
+    cover.style.setProperty("--cover-y", "0");
+  };
+
+  cover.addEventListener("pointermove", (event) => {
+    if (!reducedMotion && !cover.classList.contains("is-opening")) {
+      setCoverPosition(event.clientX, event.clientY);
+    }
+  });
+  cover.addEventListener("pointerleave", resetCoverPosition);
+  cover.addEventListener("pointercancel", resetCoverPosition);
+
+  openBook.addEventListener("click", (event) => {
+    if (cover.classList.contains("is-opening")) return;
+    event.preventDefault();
+    cover.classList.add("is-opening");
+    openBook.setAttribute("aria-disabled", "true");
+
+    window.setTimeout(
+      () => {
+        openingLetter.scrollIntoView({
+          behavior: reducedMotion ? "auto" : "smooth",
+        });
+        openingLetter.focus({ preventScroll: true });
+        history.replaceState(null, "", "#opening-letter");
+      },
+      reducedMotion ? 0 : 650,
+    );
+  });
+
+  window.addEventListener("hashchange", () => {
+    if (window.location.hash !== "#top") return;
+    cover.classList.remove("is-opening");
+    openBook.removeAttribute("aria-disabled");
+    resetCoverPosition();
+  });
+}

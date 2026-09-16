@@ -12,19 +12,42 @@
       content="A little birthday book about someone extraordinary."
     />
     <title>A Little Book About You</title>
-    <link
-      rel="preload"
-      href="images/archive-portrait.jpg"
-      as="image"
-      fetchpriority="high"
-    />
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/main.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#opening-letter">Skip to the book</a>
 
-    <header class="cover" id="top">
+    <aside
+      class="collage-intro"
+      id="collage-intro"
+      aria-labelledby="collage-title"
+      aria-modal="true"
+      role="dialog"
+    >
+      <div class="collage-intro__backdrop" data-collage-close></div>
+      <div class="collage-intro__frame">
+        <div class="collage-intro__header">
+          <p class="eyebrow">A private collection</p>
+          <p class="collage-intro__count">17 pieces / 01</p>
+        </div>
+        <div class="collage-intro__title">
+          <p class="chapter-number">Before the first page</p>
+          <h2 id="collage-title">A few<br /><em>things</em> about you.</h2>
+          <p>Gathered from ordinary days, kept here for a little while.</p>
+        </div>
+        <div
+          class="collage"
+          id="collage"
+          aria-label="A collage of memories"
+        ></div>
+        <button class="collage-intro__close" type="button" data-collage-close>
+          Enter the book <span aria-hidden="true">↗</span>
+        </button>
+      </div>
+    </aside>
+
+    <header class="cover" id="top" data-interactive-cover>
       <div class="cover__mark" aria-hidden="true">I</div>
       <p class="eyebrow">Private collection · First edition</p>
       <div class="cover__title-wrap">
@@ -45,6 +68,7 @@
       <section
         class="letter page"
         id="opening-letter"
+        tabindex="-1"
         aria-labelledby="letter-title"
       >
         <div class="page-label reveal">
