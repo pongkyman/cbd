@@ -23,12 +23,12 @@ const littleThings = [
   {
     number: "03",
     label: "Tenxi spotting",
-    text: "The way you call someone Tenxi when you see someone wearing a streetwear.",
+    text: "The way you call someone Tenxi when you see someone wearing a streetwear outfit.",
   },
   {
     number: "04",
     label: "Every stupid mistake",
-    text: "The way you always ends the sentence with “hehe” when you make a stupid mistake.",
+    text: "The way you always end the sentence with “hehe” when you make a stupid mistake.",
   },
   {
     number: "05",
@@ -45,35 +45,163 @@ const littleThings = [
     label: "Sleep",
     text: "The way you sleep at every second you got spare time.",
   },
+  {
+    number: "08",
+    label: "Laugh",
+    text: "The way you laugh really LOUD when you think something is funny.",
+  },
 ];
 
 const galleryItems = [
   {
-    src: "images/archive-portrait.jpg",
-    alt: "A quiet portrait by a sunlit window",
-    title: "Photograph 017",
-    caption: "The quiet kind of afternoon.",
-    date: "March 2026",
-    location: "At home",
+    src: "images/wisuda.webp",
+    alt: "Best picture of your graduation day.",
+    title: "Wisuda",
+    caption: "Best picture of your graduation day.",
+    date: "May 2024",
+    location: "JCC",
     shape: "portrait",
+    rotation: "-90deg",
   },
   {
-    src: "images/archive-coast.jpg",
-    alt: "A figure walking on a beach at dusk",
-    title: "Collection 03 / 018",
-    caption: "Somewhere the sky felt bigger.",
-    date: "April 2026",
-    location: "By the sea",
+    src: "images/bird.webp",
+    alt: "Happy bird",
+    title: "Bird",
+    caption: "A happy bird helmet of yours.",
+    date: "May 2026",
+    location: "Tamci",
+    shape: "portrait",
+    rotation: "90deg",
+  },
+  {
+    src: "images/audi.webp",
+    alt: "Happy bird",
+    title: "Audi",
+    caption: "You and Audi (and koko)",
+    date: "January 2025",
+    location: "Bonang",
+    shape: "portrait",
+    rotation: "90deg",
+  },
+  {
+    src: "images/first gym.webp",
+    alt: "First Gym Session",
+    title: "First Gym",
+    caption: "Your first gym session with awesome PT ofc.",
+    date: "September 2025",
+    location: "Maxxbox",
+    shape: "portrait",
+    rotation: "90deg",
+  },
+  {
+    src: "images/jasujan.webp",
+    alt: "Clara with Jas Hujan",
+    title: "Jas Hujan",
+    caption: "Your cute outfit ft. Jas Hujan Biru.",
+    date: "February 2024",
+    location: "TC",
+    shape: "portrait",
+    rotation: "90deg",
+  },
+  {
+    src: "images/marah.webp",
+    alt: "Clara Marah",
+    title: "Mad Clara",
+    caption: "Mad Clara, the one who always gets mad at me.",
+    date: "February 2025",
+    location: "Ciawi",
+    shape: "portrait",
+    rotation: "0deg",
+  },
+  {
+    src: "images/masak.webp",
+    alt: "Cooking Clara",
+    title: "Cooking",
+    caption: "Your cooking. *chef's kiss*.",
+    date: "June 2026",
+    location: "Tamci",
+    shape: "portrait",
+    rotation: "90deg",
+  },
+  {
+    src: "images/sad.webp",
+    alt: "Sad Clara",
+    title: "Sad",
+    caption: "The face you make when you hear something sad.",
+    date: "February 2026",
+    location: "Tamci",
+    shape: "portrait",
+    rotation: "90deg",
+  },
+  {
+    src: "images/spiderman.webp",
+    alt: "Spider-Man",
+    title: "Spider-Man",
+    caption: "You mocking Spider-Man at the theater.",
+    date: "August 2026",
+    location: "Lippo",
+    shape: "portrait",
+    rotation: "90deg",
+  },
+  {
+    src: "images/sushi.webp",
+    alt: "Sushi",
+    title: "Sushi birthday",
+    caption: "Your favorite meal at your special day.",
+    date: "September 2025",
+    location: "CP",
+    shape: "portrait",
+    rotation: "90deg",
+  },
+  {
+    src: "images/hehe.webp",
+    alt: "Clara and Mom",
+    title: "Clara and My Mom",
+    caption: "Two of my favorite people.",
+    date: "November 2025",
+    location: "Lippo",
+    shape: "portrait",
+    rotation: "90deg",
+  },
+  {
+    src: "images/helm.webp",
+    alt: "Helmet",
+    title: "Nice Helmet",
+    caption: "Nice helmet you got there (ondemande).",
+    date: "September 2025",
+    location: "Lippo",
+    shape: "portrait",
+    rotation: "90deg",
+  },
+  {
+    src: "images/serious.webp",
+    alt: "Serious Clara",
+    title: "Serious",
+    caption: "The face you make when you're doing something seriously.",
+    date: "March 2024",
+    location: "Semarang",
     shape: "wide",
   },
   {
-    src: "images/archive-laugh.jpg",
-    alt: "A candid laugh at a cafe table",
-    title: "Photograph 019",
-    caption: "Mid-sentence, then this.",
+    src: "images/wfc.webp",
+    alt: "WFC",
+    title: "WFC",
+    caption:
+      "Clara and her obsession with WFC (this is inside of a padel court).",
+    date: "June 2026",
+    location: "Lippo",
+    shape: "portrait",
+    rotation: "90deg",
+  },
+  {
+    src: "images/supi.webp",
+    alt: "Supi the cat",
+    title: "Supi the Cat",
+    caption: "Clara and Supi the Cat (it's actually pussy).",
     date: "May 2026",
-    location: "The usual table",
-    shape: "portrait small",
+    location: "Tamci",
+    shape: "portrait",
+    rotation: "90deg",
   },
 ];
 
@@ -81,7 +209,7 @@ const voiceNotes = [
   {
     archive: "041",
     name: "Katherine",
-    description: "A message from owner of Huka house.",
+    description: "A message from the owner of the Huka house.",
     src: "audio/ketrin.ogg",
     duration: "0:29",
   },
@@ -127,14 +255,21 @@ const voiceNotes = [
     src: "audio/syenen.ogg",
     duration: "0:23",
   },
+  {
+    archive: "048",
+    name: "Jovina",
+    description: "Audio from Jovina, the one who left pespor *hiks",
+    src: "audio/jovina.mp3",
+    duration: "1:53",
+  },
 ];
 
 const finalVoiceNote = {
   archive: "050",
   name: "One last voice",
   description: "For the final page.",
-  src: "audio/from-me.mp3",
-  duration: "1:18",
+  src: "audio/pong.ogg",
+  duration: "1:04",
 };
 
 const factIndex = document.querySelector("#fact-index");
@@ -155,10 +290,24 @@ littleThings.forEach((item) => {
 
 const gallery = document.querySelector("#gallery");
 galleryItems.forEach((item) => {
+  const rotation = item.rotation || "0deg";
+  const isSideways = Math.abs(parseFloat(rotation)) % 180 === 90;
+
   gallery.insertAdjacentHTML(
     "beforeend",
-    `<figure class="gallery-item gallery-item--${item.shape.replace(" ", " gallery-item--")} reveal"><div class="image-wrap"><img src="${item.src}" alt="${item.alt}" loading="lazy" decoding="async"></div><figcaption><p>${item.title}</p><p>${item.caption}</p><p>${item.location} · ${item.date}</p></figcaption></figure>`,
+    `<figure class="gallery-item gallery-item--${item.shape.replace(" ", " gallery-item--")} reveal"><div class="image-wrap${isSideways ? " image-wrap--sideways" : ""}"><img src="${item.src}" alt="${item.alt}" loading="lazy" decoding="async" style="--rotation: ${rotation}"></div><figcaption><p>${item.title}</p><p>${item.caption}</p><p>${item.location} · ${item.date}</p></figcaption></figure>`,
   );
+});
+
+gallery.querySelectorAll(".image-wrap--sideways img").forEach((image) => {
+  const fitRotatedImage = () => {
+    const sourceRatio = image.naturalWidth / image.naturalHeight;
+    image.parentElement.style.aspectRatio = `${image.naturalHeight} / ${image.naturalWidth}`;
+    image.style.setProperty("--source-ratio", sourceRatio);
+  };
+
+  if (image.complete) fitRotatedImage();
+  else image.addEventListener("load", fitRotatedImage, { once: true });
 });
 
 const audioTemplate = (note, isFinal = false) => `
