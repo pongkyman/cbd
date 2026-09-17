@@ -268,8 +268,8 @@ const finalVoiceNote = {
   archive: "050",
   name: "One last voice",
   description: "For the final page.",
-  src: "audio/pong.ogg",
-  duration: "1:04",
+  src: "audio/pong2.ogg",
+  duration: "1:17",
 };
 
 const factIndex = document.querySelector("#fact-index");
