@@ -50,6 +50,11 @@ const littleThings = [
     label: "Laugh",
     text: "The way you laugh really LOUD when you think something is funny.",
   },
+  {
+    number: "09",
+    label: "Adeeek",
+    text: 'The way you scream "ADEEEK" when you see a cute dog or cat.',
+  },
 ];
 
 const galleryItems = [
