@@ -264,7 +264,7 @@ const voiceNotes = [
     archive: "048",
     name: "Jovina",
     description: "Audio from Jovina, the one who left pespor *hiks",
-    src: "audio/jovina.mp3",
+    src: "audio/jovina.ogg",
     duration: "1:53",
   },
   {
@@ -280,6 +280,27 @@ const voiceNotes = [
     description: "Audio from Rindy, short but effective",
     src: "audio/rindy.ogg",
     duration: "0:03",
+  },
+  {
+    archive: "051",
+    name: "Deya",
+    description: "Kind audio note from Deya",
+    src: "audio/deya.mp4",
+    duration: "0:07",
+  },
+  {
+    archive: "052",
+    name: "Dita",
+    description: "Message from Dita",
+    src: "audio/Dita.ogg",
+    duration: "0:22",
+  },
+  {
+    archive: "053",
+    name: "Kya",
+    description: ".mp3 from Kya",
+    src: "audio/kya.ogg",
+    duration: "0:12",
   },
 ];
 
