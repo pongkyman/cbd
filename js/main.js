@@ -267,6 +267,20 @@ const voiceNotes = [
     src: "audio/jovina.mp3",
     duration: "1:53",
   },
+  {
+    archive: "049",
+    name: "Devi",
+    description: "Audio from Devi, who somehow named 'Thomas' in your phone",
+    src: "audio/devi.ogg",
+    duration: "0:15",
+  },
+  {
+    archive: "050",
+    name: "Rindy",
+    description: "Audio from Rindy, short but effective",
+    src: "audio/rindy.ogg",
+    duration: "0:03",
+  },
 ];
 
 const finalVoiceNote = {
